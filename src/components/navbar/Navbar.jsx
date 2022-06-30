@@ -26,7 +26,13 @@ const Navbar =() =>{
               <li class="nav-item ">
                 <Link class="nav-link active" to="/shop" >Shop</Link>
               </li>
+              <li class="nav-item ">
+                <Link class="nav-link active" to="/todo" >ToDolist</Link>
+              </li>
+
+
             </ul>
+            
            
           </div>
         </div>
