@@ -2,8 +2,9 @@ import './App.css';
 import About from './pages/about/About';
 import Home from './pages/home/Home';
 import Shop from './pages/shop/shop';
-import Product from './pages/shop/Product'
+import Product from './pages/shop/Product';
 import Navbar from './components/navbar/Navbar';
+import TodoList from './pages/todo/Todo';
 import {BrowserRouter ,Route , Routes}from 'react-router-dom';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <Route path="/about" element={ <About/>}></Route> 
     <Route path="/shop" element={ <Shop/>}></Route> 
     <Route path="/Product/:id" element={ <Product/>}></Route> 
+    <Route path="/todo" element={<TodoList/>}></Route>
     </Routes>
     </BrowserRouter>
   );
