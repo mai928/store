@@ -29,6 +29,16 @@ const Navbar =() =>{
               <li class="nav-item ">
                 <Link class="nav-link active" to="/todo" >ToDolist</Link>
               </li>
+              <li class="nav-item ">
+                <Link class="nav-link active" to="/counter" >Counter</Link>
+              </li>
+              <li class="nav-item ">
+                <Link class="nav-link active" to="/signin" >Sign in</Link>
+              </li>
+              <li class="nav-item ">
+                <Link class="nav-link active" to="/signup" >Sign up</Link>
+              </li>
+
 
 
             </ul>

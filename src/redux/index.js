@@ -1,58 +1,24 @@
-import {createStore} from'redux'
+import {configureStore} from'@reduxjs/toolkit'
+import { todoreducer } from './config';
 
-//Action   type   payload   (add action)
-  export const addTodoAction =(payload)=>{
+import { todoSlice} from'./feature/todoSlice'
+import  {shopSlice}from './feature/shopSlice'
+import  {counterSlice} from './feature/counterSlice'
 
-    return{ 
-        type:"ADD_TODO",
-        payload :payload
 
-    }
-}
-//  Delete action
- export const deleteTodoAction =(payload)=>{
-        return{
-            type: "DELETE_TODO",
-            payload
-        }
-  }
-//Intial State
-const initialState={
-    todos :[
-
-        {
-            title: "learn node js",
-            content: "Lorem ipsum dolor sit amet.",
-          },
-          {
-            title: "go to the sea",
-            content: "Lorem ipsum dolor sit amet.",
-          },
-          {
-            title: "walk the dog",
-            content: "Lorem ipsum dolor sit amet.",
-          },
-    ]
-}
-//Reducer
- const reducer =( state=initialState , action)=>{
-      if(action.type === "ADD_TODO"){
-            // State.todos.push()
-            //add todo to the state
-            return{...state ,todos:[...state.todos , action.payload]}
-      }
-
-      if(action.type === "DELETE_TODO"){
-          return{...state,todos:[...state.todos.filter((item, index)=>{ return index !==action.payload})]}
-      }
-       return state;
- }
+console.log('todoslice: ',todoSlice)
+console.log('counterslice: ',counterSlice)
 //Store
-export const store=createStore(
+export const store=configureStore(
     //reducer
-    reducer
+    {
+        reducer:{
+          todo:todoSlice.reducer,  
+          countreducer:counterSlice.reducer
+        }
+
+
+       
+    } 
     
 );
-
-
-

@@ -27,6 +27,7 @@ const Shop=()=>{
 
         {
          products.map((item ,i) => {
+          const {image ,title} =item
             return(
               
               <Link className="col-4    "  to={`/Product/${item.id}`} key={i}>
